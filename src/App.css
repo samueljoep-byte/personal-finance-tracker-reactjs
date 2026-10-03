@@ -1,0 +1,448 @@
+/* ==============================
+   MAIN LAYOUT
+   ============================== */
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+
+/* ==============================
+   SIDEBAR
+   ============================== */
+
+.sidebar {
+  width: 230px;
+  min-height: 100vh;
+  background: #1f2937;
+  color: white;
+  padding: 25px 15px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar a {
+  color: #d1d5db;
+  padding: 12px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  background: #374151;
+  color: white;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.header {
+  background: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header h1 {
+  font-size: 24px;
+}
+
+.header p {
+  color: #6b7280;
+  margin-top: 5px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+
+/* ==============================
+   DASHBOARD
+   ============================== */
+
+.dashboard {
+  padding: 30px;
+}
+
+.welcome {
+  margin-bottom: 25px;
+}
+
+.welcome h2 {
+  margin-bottom: 8px;
+}
+
+.welcome p {
+  color: #6b7280;
+}
+
+
+/* ==============================
+   SUMMARY CARDS
+   ============================== */
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-icon {
+  font-size: 28px;
+}
+
+.summary-card p {
+  color: #6b7280;
+  margin-bottom: 5px;
+}
+
+
+/* ==============================
+   FORM
+   ============================== */
+
+.transaction-form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.transaction-form h2 {
+  margin-bottom: 20px;
+}
+
+.transaction-form input,
+.transaction-form select {
+  padding: 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  font-size: 14px;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.transaction-form button {
+  padding: 12px 18px;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  background: #2563eb;
+  color: white;
+
+  font-weight: bold;
+}
+
+.transaction-form button:hover {
+  background: #1d4ed8;
+}
+
+.transaction-form button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+
+/* ==============================
+   CHARTS
+   ============================== */
+
+.chart-container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.chart-container h2 {
+  margin-bottom: 15px;
+}
+
+.chart-wrapper {
+  overflow-x: auto;
+}
+
+
+/* ==============================
+   TRANSACTION FILTERS
+   ============================== */
+
+.transaction-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.transaction-filters button {
+  padding: 8px 16px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: white;
+
+  cursor: pointer;
+}
+
+.transaction-filters button:hover {
+  background: #f3f4f6;
+}
+
+.transaction-filters .active-filter {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+
+/* ==============================
+   TRANSACTIONS
+   ============================== */
+
+.transactions {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.transactions h2 {
+  margin-bottom: 20px;
+}
+
+.transaction {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 0;
+
+  border-top: 1px solid #eee;
+}
+
+.transaction p {
+  color: #6b7280;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.transaction-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.transaction-actions span {
+  font-weight: bold;
+}
+
+.transaction-actions button {
+  padding: 7px 12px;
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  background: #f3f4f6;
+
+  font-size: 13px;
+}
+
+.transaction-actions button:hover {
+  background: #e5e7eb;
+}
+
+.income {
+  color: #16a34a;
+}
+
+.expense {
+  color: #dc2626;
+}
+
+
+/* ==============================
+   EMPTY STATE
+   ============================== */
+
+.empty-message {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+}
+
+
+/* ==============================
+   SETTINGS
+   ============================== */
+
+.settings-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 30px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.settings-section h2 {
+  margin-bottom: 10px;
+}
+
+.settings-section p {
+  color: #6b7280;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 180px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard {
+    padding: 20px;
+  }
+
+  .chart-container {
+    overflow-x: auto;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .app {
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    position: relative;
+    padding: 15px;
+  }
+
+  .sidebar h2 {
+    margin-bottom: 15px;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sidebar a {
+    padding: 8px;
+  }
+
+  .header {
+    padding: 15px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .profile {
+    font-size: 14px;
+  }
+
+  .dashboard {
+    padding: 15px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transaction {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .transaction-actions {
+    flex-wrap: wrap;
+  }
+
+  .transaction-form input,
+  .transaction-form select {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .transaction-form button {
+    width: 100%;
+  }
+
+  .transaction-filters {
+    flex-wrap: wrap;
+  }
+
+}
